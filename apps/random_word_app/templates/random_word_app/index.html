@@ -12,7 +12,8 @@
                 <DIV CLASS='random_word'>
                     <H1>{{ request.session.word }}</H1>
                 </DIV>
-                <form action="/generate" method='get'>
+                <form action="/generate" method='post'>
+                    {% csrf_token %}
                     <input type="submit" value="Generate" />
                 </form>
             </DIV>

@@ -9,8 +9,10 @@ def index(request):
     return render(request,'random_word_app/index.html')
 
 def reset(request):
+    request.session.clear()
     request.session['count'] = 1
-    return redirect('/')
+    del request.session['count']
+    return render(request,'random_word_app/index.html')
 
-def generate(request):
+def generate(request, methods=['POST']):
     return redirect('/')
