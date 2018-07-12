@@ -8,11 +8,11 @@
     <BODY>
         <DIV CLASS='container'>
             <DIV CLASS='all_the_things'>
-                <H3>Random Word (attempt {{count}} )</H3>
+                <H3>Random Word (attempt {{ request.session.count }} )</H3>
                 <DIV CLASS='random_word'>
-                    <H1>TEST {{random_word}} </H1>
+                    <H1>{{ request.session.word }}</H1>
                 </DIV>
-                <form action="/" method='get'>
+                <form action="/generate" method='get'>
                     <input type="submit" value="Generate" />
                 </form>
             </DIV>
