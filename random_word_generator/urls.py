@@ -19,8 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # Route to our index / 
-    url(r'^$', include('apps.random_word_app.urls')),
-    url(r'^random_word/reset$', include('apps.random_word_app.urls')),
-    url(r'^generate$', include('apps.random_word_app.urls'))
-
+    url(r'^', include('apps.random_word_app.urls')),
 ]
