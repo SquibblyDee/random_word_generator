@@ -21,5 +21,6 @@ urlpatterns = [
     # Route to our index / 
     url(r'^$', include('apps.random_word_app.urls')),
     url(r'^random_word/reset$', include('apps.random_word_app.urls')),
-    url(r'^generate$', include('apps.random_word_app.urls')),
+    url(r'^generate$', include('apps.random_word_app.urls'))
+
 ]

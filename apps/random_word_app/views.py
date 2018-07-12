@@ -4,17 +4,15 @@ from django.utils.crypto import get_random_string
 def index(request):
     if 'count' not in request.session:
         request.session['count'] = 1
-        request.session['word'] = get_random_string(length=14)
+    request.session['word'] = get_random_string(length=14)
+    request.session['count']+=1
     return render(request,'random_word_app/index.html')
 
 def reset(request):
     request.session.clear()
     request.session['count'] = 1
     del request.session['count']
-    request.session.modified = True
-    return redirect('/')
+    return render(request,'random_word_app/index.html')
 
 def generate(request, methods=['POST']):
-    request.session['word'] = get_random_string(length=14)
-    request.session['count']+=1
     return redirect('/')
