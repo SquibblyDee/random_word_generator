@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<HTML>
+    <HEAD>
+        <TITLE>Random Word Generator</TITLE>
+        <link rel="stylesheet" href="{% static '/random_word_app/css/styles.css' %}">
+    </HEAD>
+    <BODY>
+        <DIV CLASS='container'>
+            <DIV CLASS='all_the_things'>
+                <H3>Random Word (attempt {{count}} )</H3>
+                <DIV CLASS='random_word'>
+                    <H1>TEST {{random_word}} </H1>
+                </DIV>
+                <form action="/" method='get'>
+                    <input type="submit" value="Generate" />
+                </form>
+            </DIV>
+        </DIV>
+    </BODY>
+</HTML>

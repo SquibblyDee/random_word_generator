@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    text-align: center;
+}
+
+.all_the_things{
+    margin-top: 10%;
+    display: inline-block;
+}
+
+.random_word{
+    display: inline-block;
+    outline: 2px solid black;
+    padding: 8%;
+    margin: 5%;
+    width: 70%;
+}
+
+input{
+    box-shadow: 2px 2px black;
+}
